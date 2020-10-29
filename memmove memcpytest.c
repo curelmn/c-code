@@ -29,29 +29,29 @@ int main()
 	 	}
 	return 0;
 }
-//void* my_memmove(void* dest, const void* src, size_t count)
-//{
-//	assert(dest);
-//	assert(src);
-//	if (dest < src)
-//	{
-//		//前->后
-//		while (count--)
-//		{
-//			*(char*)dest = *(char*)src;
-//			dest = (char*)dest + 1;
-//			src = (char*)src + 1;
-//		}
-//	}
-//	else
-//	{
-//		//后->前
-//		while (count--)
-//		{
-//			*((char*)dest + count) = *((char*)src + count);
-//		}
-//	}
-//}
+void* my_memmove(void* dest, const void* src, size_t count)
+{
+	assert(dest);
+	assert(src);
+	if (dest < src)
+	{
+		//前->后
+		while (count--)
+		{
+			*(char*)dest = *(char*)src;
+			dest = (char*)dest + 1;
+			src = (char*)src + 1;
+		}
+	}
+	else
+	{
+		//后->前
+		while (count--)
+		{
+			*((char*)dest + count) = *((char*)src + count);
+		}
+	}
+}
 //
 //int main()
 //{
